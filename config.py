@@ -1,6 +1,8 @@
 # config.py
 import os
-# API Keys (to be set as environment variables)
+
+
+# API Keys (to be set as environment variables
 ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
 
 # OSINT Resources
