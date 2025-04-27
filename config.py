@@ -2,7 +2,7 @@
 import os
 
 # API Keys (to be set as environment variables)
-ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY", "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")
+ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
 
 # OSINT Resources
 OSINT_RESOURCES = {
