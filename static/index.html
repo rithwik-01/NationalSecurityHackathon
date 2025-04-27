@@ -1,0 +1,322 @@
+<!-- static/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Powered Red Team Simulator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 20px;
+            background-color: #f8f9fa;
+        }
+        .card {
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1) ;
+        }
+        .card-header {
+            background-color: #343a40;
+            color: white;
+        }
+        .result-card {
+            border-left: 4px solid #007bff;
+        }
+        .success {
+            color: #28a745;
+        }
+        .failure {
+            color: #dc3545;
+        }
+        .step-card {
+            margin-bottom: 10px;
+        }
+        .step-success {
+            border-left: 4px solid #28a745;
+        }
+        .step-failure {
+            border-left: 4px solid #dc3545;
+        }
+        #visualization-container img {
+            max-width: 100%;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mb-4">AI-Powered Red Team Simulator</h1>
+        <p class="lead text-center mb-5">Simulate cyber and physical threats against national infrastructure to test and enhance resilience</p>
+        
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">Target Selection</h5>
+                    </div>
+                    <div class="card-body">
+                        <form id="target-form">
+                            <div class="mb-3">
+                                <label for="target-type" class="form-label">Target Type</label>
+                                <select class="form-select" id="target-type" required>
+                                    <option value="">Select target type</option>
+                                    <option value="maritime">Maritime Vessel</option>
+                                    <option value="infrastructure">Critical Infrastructure</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="target-search" class="form-label">Search Targets</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="target-search" placeholder="Search...">
+                                    <button class="btn btn-outline-secondary" type="button" id="search-button">Search</button>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="target-select" class="form-label">Select Target</label>
+                                <select class="form-select" id="target-select" required>
+                                    <option value="">Select a target</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="complexity" class="form-label">Attack Complexity</label>
+                                <select class="form-select" id="complexity" required>
+                                    <option value="low">Low</option>
+                                    <option value="medium" selected>Medium</option>
+                                    <option value="high">High</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Run Simulation</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">Analysis</h5>
+                    </div>
+                    <div class="card-body">
+                        <button id="analyze-button" class="btn btn-success w-100 mb-3" disabled>Analyze Results</button>
+                        <button id="visualize-button" class="btn btn-info w-100" disabled>Generate Visualizations</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0">Simulation Results</h5>
+                        <span id="result-count" class="badge bg-secondary">0 simulations</span>
+                    </div>
+                    <div class="card-body">
+                        <div id="results-container">
+                            <p class="text-center text-muted">No simulation results yet. Run a simulation to see results.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">Visualizations</h5>
+                    </div>
+                    <div class="card-body">
+                        <div id="visualization-container">
+                            <p class="text-center text-muted">No visualizations yet. Analyze results to generate visualizations.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // JavaScript code would go here to handle form submission, API calls, and UI updates
+        // This would be more extensive in a real implementation
+        
+        document.addEventListener('DOMContentLoaded', function()  {
+            const targetForm = document.getElementById('target-form');
+            const searchButton = document.getElementById('search-button');
+            const analyzeButton = document.getElementById('analyze-button');
+            const visualizeButton = document.getElementById('visualize-button');
+            const resultsContainer = document.getElementById('results-container');
+            const visualizationContainer = document.getElementById('visualization-container');
+            const resultCount = document.getElementById('result-count');
+            
+            let simulationCount = 0;
+            
+            // Handle target search
+            searchButton.addEventListener('click', function() {
+                const targetType = document.getElementById('target-type').value;
+                const searchQuery = document.getElementById('target-search').value;
+                
+                if (!targetType || !searchQuery) {
+                    alert('Please select a target type and enter a search query');
+                    return;
+                }
+                
+                // In a real implementation, this would call the search API
+                // For the hackathon, we'll simulate it
+                
+                const targetSelect = document.getElementById('target-select');
+                targetSelect.innerHTML = '<option value="">Select a target</option>';
+                
+                if (targetType === 'maritime') {
+                    for (let i = 1; i <= 5; i++) {
+                        const option = document.createElement('option');
+                        option.value = `VESSEL${i}`;
+                        option.textContent = `Vessel ${i} (${searchQuery} match)`;
+                        targetSelect.appendChild(option);
+                    }
+                } else {
+                    for (let i = 1; i <= 5; i++) {
+                        const option = document.createElement('option');
+                        option.value = `FACILITY${i}`;
+                        option.textContent = `Facility ${i} (${searchQuery} match)`;
+                        targetSelect.appendChild(option);
+                    }
+                }
+            });
+            
+            // Handle simulation form submission
+            targetForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const targetType = document.getElementById('target-type').value;
+                const targetId = document.getElementById('target-select').value;
+                const complexity = document.getElementById('complexity').value;
+                
+                if (!targetType || !targetId) {
+                    alert('Please select a target');
+                    return;
+                }
+                
+                // In a real implementation, this would call the simulation API
+                // For the hackathon, we'll simulate it
+                
+                simulationCount++;
+                resultCount.textContent = `${simulationCount} simulation${simulationCount !== 1 ? 's' : ''}`;
+                
+                // Enable analysis buttons
+                analyzeButton.disabled = false;
+                
+                // Create a result card
+                const resultCard = document.createElement('div');
+                resultCard.className = 'card result-card mb-3';
+                
+                const success = Math.random() > 0.5;
+                
+                resultCard.innerHTML = `
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h6 class="mb-0">${targetType === 'maritime' ? 'Vessel' : 'Facility'} ${targetId}</h6>
+                        <span class="badge ${success ? 'bg-danger' : 'bg-success'}">${success ? 'Attack Successful' : 'Defense Successful'}</span>
+                    </div>
+                    <div class="card-body">
+                        <p><strong>Attack Vector:</strong> ${['Network Intrusion', 'Social Engineering', 'Physical Access', 'Supply Chain'][Math.floor(Math.random() * 4)]}</p>
+                        <p><strong>Complexity:</strong> ${complexity.charAt(0).toUpperCase() + complexity.slice(1)}</p>
+                        <h6>Attack Steps:</h6>
+                        <div class="steps-container">
+                            ${generateRandomSteps(3 + Math.floor(Math.random() * 3))}
+                        </div>
+                    </div>
+                `;
+                
+                // Add to results container
+                if (simulationCount === 1) {
+                    resultsContainer.innerHTML = '';
+                }
+                resultsContainer.prepend(resultCard);
+            });
+            
+            // Handle analysis button
+            analyzeButton.addEventListener('click', function() {
+                // In a real implementation, this would call the analysis API
+                // For the hackathon, we'll simulate it
+                
+                alert('Analysis complete! Vulnerabilities identified and recommendations generated.');
+                visualizeButton.disabled = false;
+            });
+            
+            // Handle visualization button
+            visualizeButton.addEventListener('click', function() {
+                // In a real implementation, this would call the visualization API
+                // For the hackathon, we'll simulate it
+                
+                visualizationContainer.innerHTML = `
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6 class="text-center">Attack Success Rate</h6>
+                            <div class="text-center">
+                                <div class="progress" style="height: 30px;">
+                                    <div class="progress-bar bg-danger" role="progressbar" style="width: ${Math.floor(Math.random() * 100)}%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h6 class="text-center">Vulnerability Severity</h6>
+                            <div class="text-center">
+                                <div class="progress" style="height: 20px; margin-bottom: 5px;">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: ${Math.floor(Math.random() * 30)}%">Low</div>
+                                </div>
+                                <div class="progress" style="height: 20px; margin-bottom: 5px;">
+                                    <div class="progress-bar bg-warning" role="progressbar" style="width: ${Math.floor(Math.random() * 40)}%">Medium</div>
+                                </div>
+                                <div class="progress" style="height: 20px; margin-bottom: 5px;">
+                                    <div class="progress-bar bg-danger" role="progressbar" style="width: ${Math.floor(Math.random() * 30)}%">High</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <h6>Top Recommendations:</h6>
+                        <ul class="list-group">
+                            <li class="list-group-item">Implement multi-factor authentication across all systems</li>
+                            <li class="list-group-item">Segment networks to limit lateral movement</li>
+                            <li class="list-group-item">Conduct regular security awareness training for all personnel</li>
+                            <li class="list-group-item">Establish a vulnerability management program with clear remediation timelines</li>
+                            <li class="list-group-item">Deploy intrusion detection systems at network boundaries</li>
+                        </ul>
+                    </div>
+                `;
+            });
+            
+            // Helper function to generate random attack steps
+            function generateRandomSteps(count) {
+                const steps = [
+                    'Reconnaissance of target systems',
+                    'Vulnerability scanning',
+                    'Exploitation of unpatched systems',
+                    'Credential harvesting',
+                    'Privilege escalation',
+                    'Lateral movement',
+                    'Data exfiltration',
+                    'Persistence establishment',
+                    'Command and control setup',
+                    'Evidence removal'
+                ];
+                
+                let html = '';
+                
+                for (let i = 0; i < count; i++) {
+                    const success = Math.random() > 0.3;
+                    const step = steps[Math.floor(Math.random() * steps.length)];
+                    
+                    html += `
+                        <div class="card step-card ${success ? 'step-success' : 'step-failure'}">
+                            <div class="card-body py-2">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span>${i+1}. ${step}</span>
+                                    <span class="${success ? 'success' : 'failure'}">${success ? '✓' : '✗'}</span>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }
+                
+                return html;
+            }
+        });
+    </script>
+</body>
+</html>
