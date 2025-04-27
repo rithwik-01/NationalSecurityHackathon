@@ -1,6 +1,7 @@
 # src/models/claude_agent.py
 import anthropic
 import os
+import json
 from typing import Dict, List, Any
 
 class ClaudeAgent:
@@ -12,18 +13,18 @@ class ClaudeAgent:
         """Generate a realistic attack scenario based on target information"""
         prompt = self._create_attack_scenario_prompt(target_info, complexity)
         
-            response = self.client.messages.create(
-                model="claude-3-opus-20240229",
-                max_tokens=2000,
-                temperature=0.7,
-                system="You are an expert red team security analyst tasked with identifying realistic vulnerabilities in systems.",
-                messages=[
-                    {"role": "user", "content": prompt}
-                ]
-            )
-            
-            # Parse the response into a structured scenario
-            return self._parse_attack_scenario(response.content[0].text)
+        response = self.client.messages.create(
+            model="claude-3-opus-20240229",
+            max_tokens=2000,
+            temperature=0.7,
+            system="You are an expert red team security analyst tasked with identifying realistic vulnerabilities in systems.",
+            messages=[
+                {"role": "user", "content": prompt}
+            ]
+        )
+        
+        # Parse the response into a structured scenario
+        return self._parse_attack_scenario(response.content[0].text)
         
     def analyze_vulnerability(self, scenario: Dict[str, Any], system_details: Dict[str, Any]) -> Dict[str, Any]:
         """Analyze a vulnerability and provide detailed explanation and recommendations"""
@@ -41,6 +42,76 @@ class ClaudeAgent:
         
         # Parse the response into structured analysis
         return self._parse_vulnerability_analysis(response.content[0].text)
+    
+    def analyze_simulation_results(self, simulation_results: List[Dict[str, Any]]) -> Dict[str, Any]:
+        """Analyze simulation results using Claude to generate insights and recommendations"""
+        if not simulation_results:
+            return {"error": "No simulation results to analyze"}
+            
+        # Create a detailed prompt for analysis
+        prompt = f"""You are a cybersecurity expert analyzing red team simulation results. Please provide a detailed analysis of the following simulation results, including:
+
+1. Key Findings
+2. Attack Pattern Analysis
+3. Critical Vulnerabilities
+4. Defense Recommendations
+5. Risk Assessment
+
+Here are the simulation results:
+{json.dumps(simulation_results, indent=2)}
+
+Please provide your analysis in a structured format."""
+
+        try:
+            response = self.client.messages.create(
+                model="claude-3-opus-20240229",
+                max_tokens=2000,
+                temperature=0.7,
+                system="You are an expert cybersecurity analyst specializing in red team assessments and vulnerability analysis.",
+                messages=[
+                    {"role": "user", "content": prompt}
+                ]
+            )
+            
+            analysis = response.content[0].text
+            
+            # Parse the analysis into sections
+            sections = {
+                "key_findings": [],
+                "attack_patterns": [],
+                "critical_vulnerabilities": [],
+                "recommendations": [],
+                "risk_assessment": ""
+            }
+            
+            # Simple parsing of the response into sections
+            current_section = None
+            for line in analysis.split('\n'):
+                if "Key Findings" in line:
+                    current_section = "key_findings"
+                elif "Attack Pattern" in line:
+                    current_section = "attack_patterns"
+                elif "Critical Vulnerabilities" in line:
+                    current_section = "critical_vulnerabilities"
+                elif "Defense Recommendations" in line:
+                    current_section = "recommendations"
+                elif "Risk Assessment" in line:
+                    current_section = "risk_assessment"
+                elif current_section and line.strip():
+                    if current_section == "risk_assessment":
+                        sections[current_section] += line + "\n"
+                    elif line.startswith("- "):
+                        sections[current_section].append(line[2:])
+                        
+            return {
+                "analysis": sections,
+                "raw_analysis": analysis
+            }
+            
+        except Exception as e:
+            return {
+                "error": f"Error analyzing results: {str(e)}"
+            }
     
     def _create_attack_scenario_prompt(self, target_info: Dict[str, Any], complexity: str) -> str:
         # Detailed prompt engineering for realistic attack scenarios
