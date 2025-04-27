@@ -1,0 +1,117 @@
+[
+  {
+    "id": "FAC10001",
+    "name": "Hoover Dam",
+    "type": "Power Plant",
+    "location": {
+      "city": "Boulder City",
+      "state": "Nevada",
+      "country": "US",
+      "coordinates": {
+        "latitude": 35.792777239991366,
+        "longitude": -96.55037789836805
+      }
+    },
+    "size": "Small",
+    "security_level": "low",
+    "systems": [
+      "SCADA",
+      "Physical Security",
+      "IT Network",
+      "Employee Access",
+      "Power Distribution"
+    ]
+  },
+  {
+    "id": "FAC10002",
+    "name": "Three Mile Island",
+    "type": "Power Plant",
+    "location": {
+      "city": "Londonderry Township",
+      "state": "Pennsylvania",
+      "country": "US",
+      "coordinates": {
+        "latitude": 33.978680786019346,
+        "longitude": -101.54990473397963
+      }
+    },
+    "size": "Small",
+    "security_level": "high",
+    "systems": [
+      "SCADA",
+      "Physical Security",
+      "IT Network",
+      "Employee Access",
+      "Power Distribution"
+    ]
+  },
+  {
+    "id": "FAC10003",
+    "name": "O'Hare International Airport",
+    "type": "Transportation Hub",
+    "location": {
+      "city": "Chicago",
+      "state": "Illinois",
+      "country": "US",
+      "coordinates": {
+        "latitude": 44.0834042092463,
+        "longitude": -119.02760432133432
+      }
+    },
+    "size": "Medium",
+    "security_level": "medium",
+    "systems": [
+      "Air Traffic Control",
+      "Physical Security",
+      "IT Network",
+      "Employee Access",
+      "Passenger Management"
+    ]
+  },
+  {
+    "id": "FAC10004",
+    "name": "Raven Rock Mountain Complex",
+    "type": "Government Facility",
+    "location": {
+      "city": "Liberty Township",
+      "state": "Pennsylvania",
+      "country": "US",
+      "coordinates": {
+        "latitude": 32.00305307239345,
+        "longitude": -124.21803936957048
+      }
+    },
+    "size": "Medium",
+    "security_level": "high",
+    "systems": [
+      "Access Control",
+      "Physical Security",
+      "IT Network",
+      "Employee Access",
+      "Communications"
+    ]
+  },
+  {
+    "id": "FAC10005",
+    "name": "Ashburn Data Center Alley",
+    "type": "Data Center",
+    "location": {
+      "city": "Ashburn",
+      "state": "Virginia",
+      "country": "US",
+      "coordinates": {
+        "latitude": 41.72234594202786,
+        "longitude": -91.09024395747795
+      }
+    },
+    "size": "Large",
+    "security_level": "low",
+    "systems": [
+      "Cooling Systems",
+      "Physical Security",
+      "IT Network",
+      "Employee Access",
+      "Power Management"
+    ]
+  }
+]

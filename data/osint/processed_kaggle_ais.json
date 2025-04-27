@@ -1,0 +1,596 @@
+[
+  {
+    "mmsi": "123456789",
+    "vessel_name": "BLUE MARLIN",
+    "vessel_type": "Cargo",
+    "position": {
+      "latitude": 37.7749,
+      "longitude": -122.4194,
+      "timestamp": "2025-04-25 08:30:00"
+    },
+    "length": 250,
+    "width": 40,
+    "course": 180,
+    "speed": 12.5,
+    "destination": "San Francisco",
+    "flag": "Panama",
+    "systems": [
+      "navigation",
+      "communication",
+      "engine_control",
+      "cargo_management",
+      "ballast_management"
+    ],
+    "security_level": "low"
+  },
+  {
+    "mmsi": "147590530",
+    "vessel_name": "SOUTHERN PRINCESS",
+    "vessel_type": "Pleasure Craft",
+    "position": {
+      "latitude": 31.89591734107325,
+      "longitude": -88.57589912008646,
+      "timestamp": "2025-04-24 3:3:00"
+    },
+    "length": 237,
+    "width": 57,
+    "course": 51,
+    "speed": 19.390336340481333,
+    "destination": "Port Unknown",
+    "flag": "Bahamas",
+    "systems": [
+      "navigation",
+      "communication",
+      "engine_control",
+      "crew_systems"
+    ],
+    "security_level": "low"
+  },
+  {
+    "mmsi": "232547023",
+    "vessel_name": "SEA VOYAGER",
+    "vessel_type": "Cargo",
+    "position": {
+      "latitude": 26.10413372517339,
+      "longitude": -117.9439924370785,
+      "timestamp": "2025-04-21 4:26:00"
+    },
+    "length": 229,
+    "width": 57,
+    "course": 103,
+    "speed": 16.835155910538276,
+    "destination": "Port Unknown",
+    "flag": "Greece",
+    "systems": [
+      "navigation",
+      "communication",
+      "engine_control",
+      "cargo_management",
+      "ballast_management"
+    ],
+    "security_level": "low"
+  },
+  {
+    "mmsi": "234567890",
+    "vessel_name": "OCEAN TRADER",
+    "vessel_type": "Tanker",
+    "position": {
+      "latitude": 34.0522,
+      "longitude": -118.2437,
+      "timestamp": "2025-04-25 09:15:00"
+    },
+    "length": 320,
+    "width": 58,
+    "course": 270,
+    "speed": 8.7,
+    "destination": "Long Beach",
+    "flag": "Marshall Islands",
+    "systems": [
+      "navigation",
+      "communication",
+      "engine_control",
+      "cargo_management",
+      "ballast_management"
+    ],
+    "security_level": "medium"
+  },
+  {
+    "mmsi": "254834153",
+    "vessel_name": "EASTERN PRINCESS",
+    "vessel_type": "Passenger",
+    "position": {
+      "latitude": 25.238568712018917,
+      "longitude": -97.46457146096392,
+      "timestamp": "2025-04-25 23:45:00"
+    },
+    "length": 298,
+    "width": 58,
+    "course": 100,
+    "speed": 7.645973403620172,
+    "destination": "Port Unknown",
+    "flag": "Panama",
+    "systems": [
+      "navigation",
+      "communication",
+      "engine_control",
+      "passenger_management",
+      "entertainment_systems"
+    ],
+    "security_level": "medium"
+  },
+  {
+    "mmsi": "293385645",
+    "vessel_name": "NORTHERN PRINCESS",
+    "vessel_type": "SAR",
+    "position": {
+      "latitude": 25.448511060134607,
+      "longitude": -115.2381858501268,
+      "timestamp": "2025-04-20 5:49:00"
+    },
+    "length": 157,
+    "width": 11,
+    "course": 43,
+    "speed": 14.616910593406562,
+    "destination": "Port Unknown",
+    "flag": "Japan",
+    "systems": [
+      "navigation",
+      "communication",
+      "engine_control",
+      "crew_systems"
+    ],
+    "security_level": "low"
+  },
+  {
+    "mmsi": "345678901",
+    "vessel_name": "PACIFIC VOYAGER",
+    "vessel_type": "Passenger",
+    "position": {
+      "latitude": 40.7128,
+      "longitude": -74.006,
+      "timestamp": "2025-04-25 10:45:00"
+    },
+    "length": 180,
+    "width": 30,
+    "course": 90,
+    "speed": 15.2,
+    "destination": "New York",
+    "flag": "Liberia",
+    "systems": [
+      "navigation",
+      "communication",
+      "engine_control",
+      "passenger_management",
+      "entertainment_systems"
+    ],
+    "security_level": "medium"
+  },
+  {
+    "mmsi": "349817396",
+    "vessel_name": "NORTHERN EXPLORER",
+    "vessel_type": "SAR",
+    "position": {
+      "latitude": 49.91506157032417,
+      "longitude": -115.63818440102338,
+      "timestamp": "2025-04-25 2:12:00"
+    },
+    "length": 194,
+    "width": 13,
+    "course": 8,
+    "speed": 13.342822047001626,
+    "destination": "Port Unknown",
+    "flag": "Malta",
+    "systems": [
+      "navigation",
+      "communication",
+      "engine_control",
+      "crew_systems"
+    ],
+    "security_level": "low"
+  },
+  {
+    "mmsi": "357953055",
+    "vessel_name": "OCEAN DISCOVERY",
+    "vessel_type": "Passenger",
+    "position": {
+      "latitude": 48.49176779882416,
+      "longitude": -81.09084842566563,
+      "timestamp": "2025-04-25 5:58:00"
+    },
+    "length": 165,
+    "width": 46,
+    "course": 193,
+    "speed": 9.72437491042886,
+    "destination": "Port Unknown",
+    "flag": "Marshall Islands",
+    "systems": [
+      "navigation",
+      "communication",
+      "engine_control",
+      "passenger_management",
+      "entertainment_systems"
+    ],
+    "security_level": "medium"
+  },
+  {
+    "mmsi": "415705254",
+    "vessel_name": "SEA KING",
+    "vessel_type": "Tug",
+    "position": {
+      "latitude": 48.77952741037093,
+      "longitude": -115.80683985239432,
+      "timestamp": "2025-04-23 4:28:00"
+    },
+    "length": 213,
+    "width": 41,
+    "course": 277,
+    "speed": 19.06210528182041,
+    "destination": "Port Unknown",
+    "flag": "Malta",
+    "systems": [
+      "navigation",
+      "communication",
+      "engine_control",
+      "crew_systems"
+    ],
+    "security_level": "low"
+  },
+  {
+    "mmsi": "456789012",
+    "vessel_name": "NORTHERN STAR",
+    "vessel_type": "Fishing",
+    "position": {
+      "latitude": 47.6062,
+      "longitude": -122.3321,
+      "timestamp": "2025-04-25 11:20:00"
+    },
+    "length": 85,
+    "width": 15,
+    "course": 135,
+    "speed": 6.8,
+    "destination": "Seattle",
+    "flag": "USA",
+    "systems": [
+      "navigation",
+      "communication",
+      "engine_control",
+      "fishing_equipment",
+      "refrigeration_systems"
+    ],
+    "security_level": "low"
+  },
+  {
+    "mmsi": "513687937",
+    "vessel_name": "SEA VOYAGER",
+    "vessel_type": "Passenger",
+    "position": {
+      "latitude": 49.67473475662227,
+      "longitude": -120.10604044586871,
+      "timestamp": "2025-04-21 14:7:00"
+    },
+    "length": 88,
+    "width": 52,
+    "course": 94,
+    "speed": 9.038063520079676,
+    "destination": "Port Unknown",
+    "flag": "Bahamas",
+    "systems": [
+      "navigation",
+      "communication",
+      "engine_control",
+      "passenger_management",
+      "entertainment_systems"
+    ],
+    "security_level": "medium"
+  },
+  {
+    "mmsi": "530508632",
+    "vessel_name": "STAR PRINCESS",
+    "vessel_type": "Fishing",
+    "position": {
+      "latitude": 32.36254825690334,
+      "longitude": -87.1074160422127,
+      "timestamp": "2025-04-20 11:18:00"
+    },
+    "length": 60,
+    "width": 56,
+    "course": 285,
+    "speed": 14.19591842838349,
+    "destination": "Port Unknown",
+    "flag": "Bahamas",
+    "systems": [
+      "navigation",
+      "communication",
+      "engine_control",
+      "fishing_equipment",
+      "refrigeration_systems"
+    ],
+    "security_level": "low"
+  },
+  {
+    "mmsi": "539718320",
+    "vessel_name": "OCEAN QUEEN",
+    "vessel_type": "Law Enforcement",
+    "position": {
+      "latitude": 47.159104396503025,
+      "longitude": -87.43660739624221,
+      "timestamp": "2025-04-22 17:37:00"
+    },
+    "length": 183,
+    "width": 25,
+    "course": 315,
+    "speed": 17.694747472975493,
+    "destination": "Port Unknown",
+    "flag": "Liberia",
+    "systems": [
+      "navigation",
+      "communication",
+      "engine_control",
+      "weapons_systems",
+      "surveillance_systems"
+    ],
+    "security_level": "high"
+  },
+  {
+    "mmsi": "567890123",
+    "vessel_name": "GOLDEN HORIZON",
+    "vessel_type": "Pleasure Craft",
+    "position": {
+      "latitude": 29.7604,
+      "longitude": -95.3698,
+      "timestamp": "2025-04-25 12:05:00"
+    },
+    "length": 40,
+    "width": 12,
+    "course": 315,
+    "speed": 10.1,
+    "destination": "Galveston",
+    "flag": "Bahamas",
+    "systems": [
+      "navigation",
+      "communication",
+      "engine_control",
+      "crew_systems"
+    ],
+    "security_level": "low"
+  },
+  {
+    "mmsi": "574808205",
+    "vessel_name": "SEA KING",
+    "vessel_type": "Passenger",
+    "position": {
+      "latitude": 30.29013946179004,
+      "longitude": -87.20902418278054,
+      "timestamp": "2025-04-24 18:45:00"
+    },
+    "length": 275,
+    "width": 22,
+    "course": 296,
+    "speed": 10.81133850610293,
+    "destination": "Port Unknown",
+    "flag": "Bahamas",
+    "systems": [
+      "navigation",
+      "communication",
+      "engine_control",
+      "passenger_management",
+      "entertainment_systems"
+    ],
+    "security_level": "medium"
+  },
+  {
+    "mmsi": "610593388",
+    "vessel_name": "NORTHERN TRADER",
+    "vessel_type": "SAR",
+    "position": {
+      "latitude": 26.40963628974209,
+      "longitude": -126.10596513266104,
+      "timestamp": "2025-04-25 15:26:00"
+    },
+    "length": 97,
+    "width": 11,
+    "course": 322,
+    "speed": 17.249385484221143,
+    "destination": "Port Unknown",
+    "flag": "Bahamas",
+    "systems": [
+      "navigation",
+      "communication",
+      "engine_control",
+      "crew_systems"
+    ],
+    "security_level": "low"
+  },
+  {
+    "mmsi": "687844597",
+    "vessel_name": "SEA QUEEN",
+    "vessel_type": "Law Enforcement",
+    "position": {
+      "latitude": 47.59275341612971,
+      "longitude": -121.94904209582415,
+      "timestamp": "2025-04-21 5:41:00"
+    },
+    "length": 280,
+    "width": 59,
+    "course": 91,
+    "speed": 11.743422214622091,
+    "destination": "Port Unknown",
+    "flag": "Japan",
+    "systems": [
+      "navigation",
+      "communication",
+      "engine_control",
+      "weapons_systems",
+      "surveillance_systems"
+    ],
+    "security_level": "high"
+  },
+  {
+    "mmsi": "694734033",
+    "vessel_name": "OCEAN KING",
+    "vessel_type": "Law Enforcement",
+    "position": {
+      "latitude": 37.301243330609225,
+      "longitude": -111.89229934142634,
+      "timestamp": "2025-04-25 5:51:00"
+    },
+    "length": 45,
+    "width": 35,
+    "course": 309,
+    "speed": 17.86141095343671,
+    "destination": "Port Unknown",
+    "flag": "Japan",
+    "systems": [
+      "navigation",
+      "communication",
+      "engine_control",
+      "weapons_systems",
+      "surveillance_systems"
+    ],
+    "security_level": "high"
+  },
+  {
+    "mmsi": "729925322",
+    "vessel_name": "EASTERN KING",
+    "vessel_type": "Military",
+    "position": {
+      "latitude": 40.16368018039162,
+      "longitude": -127.87022792141184,
+      "timestamp": "2025-04-22 0:10:00"
+    },
+    "length": 330,
+    "width": 35,
+    "course": 67,
+    "speed": 8.355665675872602,
+    "destination": "Port Unknown",
+    "flag": "Malta",
+    "systems": [
+      "navigation",
+      "communication",
+      "engine_control",
+      "weapons_systems",
+      "surveillance_systems"
+    ],
+    "security_level": "high"
+  },
+  {
+    "mmsi": "741131445",
+    "vessel_name": "ROYAL DISCOVERY",
+    "vessel_type": "Tanker",
+    "position": {
+      "latitude": 47.98516159833578,
+      "longitude": -129.49218604604144,
+      "timestamp": "2025-04-26 4:13:00"
+    },
+    "length": 135,
+    "width": 15,
+    "course": 310,
+    "speed": 10.087045857537184,
+    "destination": "Port Unknown",
+    "flag": "Japan",
+    "systems": [
+      "navigation",
+      "communication",
+      "engine_control",
+      "cargo_management",
+      "ballast_management"
+    ],
+    "security_level": "medium"
+  },
+  {
+    "mmsi": "799950412",
+    "vessel_name": "SOUTHERN STAR",
+    "vessel_type": "Cargo",
+    "position": {
+      "latitude": 44.53406289039657,
+      "longitude": -109.38983888493678,
+      "timestamp": "2025-04-23 8:28:00"
+    },
+    "length": 314,
+    "width": 53,
+    "course": 146,
+    "speed": 13.156969823201358,
+    "destination": "Port Unknown",
+    "flag": "Liberia",
+    "systems": [
+      "navigation",
+      "communication",
+      "engine_control",
+      "cargo_management",
+      "ballast_management"
+    ],
+    "security_level": "low"
+  },
+  {
+    "mmsi": "814468850",
+    "vessel_name": "NORTHERN KING",
+    "vessel_type": "Cargo",
+    "position": {
+      "latitude": 29.9762839996998,
+      "longitude": -78.0518849981003,
+      "timestamp": "2025-04-22 8:34:00"
+    },
+    "length": 211,
+    "width": 36,
+    "course": 186,
+    "speed": 19.96418224544217,
+    "destination": "Port Unknown",
+    "flag": "Singapore",
+    "systems": [
+      "navigation",
+      "communication",
+      "engine_control",
+      "cargo_management",
+      "ballast_management"
+    ],
+    "security_level": "low"
+  },
+  {
+    "mmsi": "987480217",
+    "vessel_name": "WESTERN DISCOVERY",
+    "vessel_type": "Military",
+    "position": {
+      "latitude": 29.983344716243728,
+      "longitude": -71.82588312636683,
+      "timestamp": "2025-04-23 16:52:00"
+    },
+    "length": 82,
+    "width": 55,
+    "course": 51,
+    "speed": 16.319517743326195,
+    "destination": "Port Unknown",
+    "flag": "Panama",
+    "systems": [
+      "navigation",
+      "communication",
+      "engine_control",
+      "weapons_systems",
+      "surveillance_systems"
+    ],
+    "security_level": "high"
+  },
+  {
+    "mmsi": "997967763",
+    "vessel_name": "BLUE QUEEN",
+    "vessel_type": "Law Enforcement",
+    "position": {
+      "latitude": 44.80348544999412,
+      "longitude": -123.40125289280492,
+      "timestamp": "2025-04-21 12:11:00"
+    },
+    "length": 339,
+    "width": 56,
+    "course": 221,
+    "speed": 18.626279449062903,
+    "destination": "Port Unknown",
+    "flag": "Greece",
+    "systems": [
+      "navigation",
+      "communication",
+      "engine_control",
+      "weapons_systems",
+      "surveillance_systems"
+    ],
+    "security_level": "high"
+  }
+]

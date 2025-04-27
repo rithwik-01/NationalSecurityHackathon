@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_2204647b504dfd92f592dadebe0a7a27 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_2204647b504dfd92f592dadebe0a7a27" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_2204647b504dfd92f592dadebe0a7a27 = L.map(
+                "map_2204647b504dfd92f592dadebe0a7a27",
+                {
+                    center: [36.841338761791945, -104.6427621547339],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 5,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_ad6ee520959153517003f8042225eaec = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_ad6ee520959153517003f8042225eaec.addTo(map_2204647b504dfd92f592dadebe0a7a27);
+        
+    
+            var marker_cluster_abfccece6a9dc28a72600a5e2cbe6505 = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            var marker_1b6d8c0b12b570661614512783264959 = L.marker(
+                [37.7749, -122.4194],
+                {
+}
+            ).addTo(marker_cluster_abfccece6a9dc28a72600a5e2cbe6505);
+        
+    
+            var icon_8579b3c2a3b5f10dbf693594f33556b0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "ship",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f6643863f9f479bb57ec1bae915467c8 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4629f939e78a97f4a75e346802506b81 = $(`<div id="html_4629f939e78a97f4a75e346802506b81" style="width: 100.0%; height: 100.0%;">             <h4>BLUE MARLIN</h4>             <b>MMSI:</b> 123456789<br>             <b>Type:</b> Cargo<br>             <b>Security Level:</b> low<br>             <b>Position:</b> 37.7749, -122.4194<br>             <b>Course:</b> 180°<br><b>Speed:</b> 12.5 knots<br><b>Destination:</b> San Francisco<br></div>`)[0];
+                popup_f6643863f9f479bb57ec1bae915467c8.setContent(html_4629f939e78a97f4a75e346802506b81);
+            
+        
+
+        marker_1b6d8c0b12b570661614512783264959.bindPopup(popup_f6643863f9f479bb57ec1bae915467c8)
+        ;
+
+        
+    
+    
+            marker_1b6d8c0b12b570661614512783264959.bindTooltip(
+                `<div>
+                     BLUE MARLIN
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1b6d8c0b12b570661614512783264959.setIcon(icon_8579b3c2a3b5f10dbf693594f33556b0);
+            
+    
+            var marker_1226177c8e812e3972deea493eeacc10 = L.marker(
+                [31.89591734107325, -88.57589912008646],
+                {
+}
+            ).addTo(marker_cluster_abfccece6a9dc28a72600a5e2cbe6505);
+        
+    
+            var icon_0ee88d3d54f550ab30a14c906a611981 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "ship",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c96ce374722f5150e6e14795758a0c36 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_da79303fd83a455f862a9a19c4ad1efa = $(`<div id="html_da79303fd83a455f862a9a19c4ad1efa" style="width: 100.0%; height: 100.0%;">             <h4>SOUTHERN PRINCESS</h4>             <b>MMSI:</b> 147590530<br>             <b>Type:</b> Pleasure Craft<br>             <b>Security Level:</b> low<br>             <b>Position:</b> 31.8959, -88.5759<br>             <b>Course:</b> 51°<br><b>Speed:</b> 19.390336340481333 knots<br><b>Destination:</b> Port Unknown<br></div>`)[0];
+                popup_c96ce374722f5150e6e14795758a0c36.setContent(html_da79303fd83a455f862a9a19c4ad1efa);
+            
+        
+
+        marker_1226177c8e812e3972deea493eeacc10.bindPopup(popup_c96ce374722f5150e6e14795758a0c36)
+        ;
+
+        
+    
+    
+            marker_1226177c8e812e3972deea493eeacc10.bindTooltip(
+                `<div>
+                     SOUTHERN PRINCESS
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1226177c8e812e3972deea493eeacc10.setIcon(icon_0ee88d3d54f550ab30a14c906a611981);
+            
+    
+            var marker_9e14b2b4949c671650b7e22ee888dbb8 = L.marker(
+                [26.10413372517339, -117.9439924370785],
+                {
+}
+            ).addTo(marker_cluster_abfccece6a9dc28a72600a5e2cbe6505);
+        
+    
+            var icon_f945fdc23cd882040650d895007e58ed = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "ship",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2a691abfccf0df80f5b35bdffca166d6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e1fe75636b2591b98272779a3000dbee = $(`<div id="html_e1fe75636b2591b98272779a3000dbee" style="width: 100.0%; height: 100.0%;">             <h4>SEA VOYAGER</h4>             <b>MMSI:</b> 232547023<br>             <b>Type:</b> Cargo<br>             <b>Security Level:</b> low<br>             <b>Position:</b> 26.1041, -117.9440<br>             <b>Course:</b> 103°<br><b>Speed:</b> 16.835155910538276 knots<br><b>Destination:</b> Port Unknown<br></div>`)[0];
+                popup_2a691abfccf0df80f5b35bdffca166d6.setContent(html_e1fe75636b2591b98272779a3000dbee);
+            
+        
+
+        marker_9e14b2b4949c671650b7e22ee888dbb8.bindPopup(popup_2a691abfccf0df80f5b35bdffca166d6)
+        ;
+
+        
+    
+    
+            marker_9e14b2b4949c671650b7e22ee888dbb8.bindTooltip(
+                `<div>
+                     SEA VOYAGER
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9e14b2b4949c671650b7e22ee888dbb8.setIcon(icon_f945fdc23cd882040650d895007e58ed);
+            
+    
+            var marker_fa6cdcec60967be64dbc034e54e93333 = L.marker(
+                [34.0522, -118.2437],
+                {
+}
+            ).addTo(marker_cluster_abfccece6a9dc28a72600a5e2cbe6505);
+        
+    
+            var icon_5b35c9e972684bde253b0bf4a326ba28 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "ship",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5cf7c8d18d966a2340ae6e5f3766eee5 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e66e2515e535801d1ad761949ced8348 = $(`<div id="html_e66e2515e535801d1ad761949ced8348" style="width: 100.0%; height: 100.0%;">             <h4>OCEAN TRADER</h4>             <b>MMSI:</b> 234567890<br>             <b>Type:</b> Tanker<br>             <b>Security Level:</b> medium<br>             <b>Position:</b> 34.0522, -118.2437<br>             <b>Course:</b> 270°<br><b>Speed:</b> 8.7 knots<br><b>Destination:</b> Long Beach<br></div>`)[0];
+                popup_5cf7c8d18d966a2340ae6e5f3766eee5.setContent(html_e66e2515e535801d1ad761949ced8348);
+            
+        
+
+        marker_fa6cdcec60967be64dbc034e54e93333.bindPopup(popup_5cf7c8d18d966a2340ae6e5f3766eee5)
+        ;
+
+        
+    
+    
+            marker_fa6cdcec60967be64dbc034e54e93333.bindTooltip(
+                `<div>
+                     OCEAN TRADER
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_fa6cdcec60967be64dbc034e54e93333.setIcon(icon_5b35c9e972684bde253b0bf4a326ba28);
+            
+    
+            var marker_75786389c623875f01f3085cacf4a16f = L.marker(
+                [25.238568712018917, -97.46457146096392],
+                {
+}
+            ).addTo(marker_cluster_abfccece6a9dc28a72600a5e2cbe6505);
+        
+    
+            var icon_42cb45b1a50c43e025139515bb0d3d86 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "ship",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6cd8dbf0935646df39c013677034afa5 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_cba0386a9b066c3f2968825bd17600e4 = $(`<div id="html_cba0386a9b066c3f2968825bd17600e4" style="width: 100.0%; height: 100.0%;">             <h4>EASTERN PRINCESS</h4>             <b>MMSI:</b> 254834153<br>             <b>Type:</b> Passenger<br>             <b>Security Level:</b> medium<br>             <b>Position:</b> 25.2386, -97.4646<br>             <b>Course:</b> 100°<br><b>Speed:</b> 7.645973403620172 knots<br><b>Destination:</b> Port Unknown<br></div>`)[0];
+                popup_6cd8dbf0935646df39c013677034afa5.setContent(html_cba0386a9b066c3f2968825bd17600e4);
+            
+        
+
+        marker_75786389c623875f01f3085cacf4a16f.bindPopup(popup_6cd8dbf0935646df39c013677034afa5)
+        ;
+
+        
+    
+    
+            marker_75786389c623875f01f3085cacf4a16f.bindTooltip(
+                `<div>
+                     EASTERN PRINCESS
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_75786389c623875f01f3085cacf4a16f.setIcon(icon_42cb45b1a50c43e025139515bb0d3d86);
+            
+    
+            var marker_0a171a810a633aa46961bfc93b00441e = L.marker(
+                [25.448511060134607, -115.2381858501268],
+                {
+}
+            ).addTo(marker_cluster_abfccece6a9dc28a72600a5e2cbe6505);
+        
+    
+            var icon_ce95c3ef526e44306aff175e578bffd8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "ship",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_136d4453a95e1160cdd3f8e2bd356109 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_242950901b7650ba17d65e058f52d6b7 = $(`<div id="html_242950901b7650ba17d65e058f52d6b7" style="width: 100.0%; height: 100.0%;">             <h4>NORTHERN PRINCESS</h4>             <b>MMSI:</b> 293385645<br>             <b>Type:</b> SAR<br>             <b>Security Level:</b> low<br>             <b>Position:</b> 25.4485, -115.2382<br>             <b>Course:</b> 43°<br><b>Speed:</b> 14.616910593406562 knots<br><b>Destination:</b> Port Unknown<br></div>`)[0];
+                popup_136d4453a95e1160cdd3f8e2bd356109.setContent(html_242950901b7650ba17d65e058f52d6b7);
+            
+        
+
+        marker_0a171a810a633aa46961bfc93b00441e.bindPopup(popup_136d4453a95e1160cdd3f8e2bd356109)
+        ;
+
+        
+    
+    
+            marker_0a171a810a633aa46961bfc93b00441e.bindTooltip(
+                `<div>
+                     NORTHERN PRINCESS
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0a171a810a633aa46961bfc93b00441e.setIcon(icon_ce95c3ef526e44306aff175e578bffd8);
+            
+    
+            var marker_2b3d7b7499c583210cd76122be500e00 = L.marker(
+                [40.7128, -74.006],
+                {
+}
+            ).addTo(marker_cluster_abfccece6a9dc28a72600a5e2cbe6505);
+        
+    
+            var icon_2305ef9242396aed9ad50e1441055a00 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "ship",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e2c3311826191e0c39d4f1f0456ea980 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c9abe64122ce32d10d29356065af4213 = $(`<div id="html_c9abe64122ce32d10d29356065af4213" style="width: 100.0%; height: 100.0%;">             <h4>PACIFIC VOYAGER</h4>             <b>MMSI:</b> 345678901<br>             <b>Type:</b> Passenger<br>             <b>Security Level:</b> medium<br>             <b>Position:</b> 40.7128, -74.0060<br>             <b>Course:</b> 90°<br><b>Speed:</b> 15.2 knots<br><b>Destination:</b> New York<br></div>`)[0];
+                popup_e2c3311826191e0c39d4f1f0456ea980.setContent(html_c9abe64122ce32d10d29356065af4213);
+            
+        
+
+        marker_2b3d7b7499c583210cd76122be500e00.bindPopup(popup_e2c3311826191e0c39d4f1f0456ea980)
+        ;
+
+        
+    
+    
+            marker_2b3d7b7499c583210cd76122be500e00.bindTooltip(
+                `<div>
+                     PACIFIC VOYAGER
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2b3d7b7499c583210cd76122be500e00.setIcon(icon_2305ef9242396aed9ad50e1441055a00);
+            
+    
+            var marker_5a70ad82224158d1ee71178afd725f12 = L.marker(
+                [49.91506157032417, -115.63818440102338],
+                {
+}
+            ).addTo(marker_cluster_abfccece6a9dc28a72600a5e2cbe6505);
+        
+    
+            var icon_3f464ccb07f60a48a8a359a6fc5b9074 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "ship",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3a2eb11d106fa032a11989ff73319a95 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f462fe7252e735a5d48b86a8a0fe72ed = $(`<div id="html_f462fe7252e735a5d48b86a8a0fe72ed" style="width: 100.0%; height: 100.0%;">             <h4>NORTHERN EXPLORER</h4>             <b>MMSI:</b> 349817396<br>             <b>Type:</b> SAR<br>             <b>Security Level:</b> low<br>             <b>Position:</b> 49.9151, -115.6382<br>             <b>Course:</b> 8°<br><b>Speed:</b> 13.342822047001626 knots<br><b>Destination:</b> Port Unknown<br></div>`)[0];
+                popup_3a2eb11d106fa032a11989ff73319a95.setContent(html_f462fe7252e735a5d48b86a8a0fe72ed);
+            
+        
+
+        marker_5a70ad82224158d1ee71178afd725f12.bindPopup(popup_3a2eb11d106fa032a11989ff73319a95)
+        ;
+
+        
+    
+    
+            marker_5a70ad82224158d1ee71178afd725f12.bindTooltip(
+                `<div>
+                     NORTHERN EXPLORER
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5a70ad82224158d1ee71178afd725f12.setIcon(icon_3f464ccb07f60a48a8a359a6fc5b9074);
+            
+    
+            var marker_376de7bcc9360131cc5839d0b8b95745 = L.marker(
+                [48.49176779882416, -81.09084842566563],
+                {
+}
+            ).addTo(marker_cluster_abfccece6a9dc28a72600a5e2cbe6505);
+        
+    
+            var icon_494e0ec22da5b0c67c76032abb4dd399 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "ship",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f321ec89a571b151b4b7244a4e525785 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a90aba1e4b3fa8542f814a8b66a231cb = $(`<div id="html_a90aba1e4b3fa8542f814a8b66a231cb" style="width: 100.0%; height: 100.0%;">             <h4>OCEAN DISCOVERY</h4>             <b>MMSI:</b> 357953055<br>             <b>Type:</b> Passenger<br>             <b>Security Level:</b> medium<br>             <b>Position:</b> 48.4918, -81.0908<br>             <b>Course:</b> 193°<br><b>Speed:</b> 9.72437491042886 knots<br><b>Destination:</b> Port Unknown<br></div>`)[0];
+                popup_f321ec89a571b151b4b7244a4e525785.setContent(html_a90aba1e4b3fa8542f814a8b66a231cb);
+            
+        
+
+        marker_376de7bcc9360131cc5839d0b8b95745.bindPopup(popup_f321ec89a571b151b4b7244a4e525785)
+        ;
+
+        
+    
+    
+            marker_376de7bcc9360131cc5839d0b8b95745.bindTooltip(
+                `<div>
+                     OCEAN DISCOVERY
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_376de7bcc9360131cc5839d0b8b95745.setIcon(icon_494e0ec22da5b0c67c76032abb4dd399);
+            
+    
+            var marker_b878861117bdd4fecee5317c9179f28b = L.marker(
+                [48.77952741037093, -115.80683985239432],
+                {
+}
+            ).addTo(marker_cluster_abfccece6a9dc28a72600a5e2cbe6505);
+        
+    
+            var icon_db8d867da16271c1eb9fe7f897db350f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "ship",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_91ef0beeab5ff719fb8625248454d2ca = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_eb862bedcf052b45aaf2302c9a436c35 = $(`<div id="html_eb862bedcf052b45aaf2302c9a436c35" style="width: 100.0%; height: 100.0%;">             <h4>SEA KING</h4>             <b>MMSI:</b> 415705254<br>             <b>Type:</b> Tug<br>             <b>Security Level:</b> low<br>             <b>Position:</b> 48.7795, -115.8068<br>             <b>Course:</b> 277°<br><b>Speed:</b> 19.06210528182041 knots<br><b>Destination:</b> Port Unknown<br></div>`)[0];
+                popup_91ef0beeab5ff719fb8625248454d2ca.setContent(html_eb862bedcf052b45aaf2302c9a436c35);
+            
+        
+
+        marker_b878861117bdd4fecee5317c9179f28b.bindPopup(popup_91ef0beeab5ff719fb8625248454d2ca)
+        ;
+
+        
+    
+    
+            marker_b878861117bdd4fecee5317c9179f28b.bindTooltip(
+                `<div>
+                     SEA KING
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b878861117bdd4fecee5317c9179f28b.setIcon(icon_db8d867da16271c1eb9fe7f897db350f);
+            
+    
+            marker_cluster_abfccece6a9dc28a72600a5e2cbe6505.addTo(map_2204647b504dfd92f592dadebe0a7a27);
+        
+    
+            var heat_map_0c0d75477e1027e157c7bd89cb29d473 = L.heatLayer(
+                [[37.7749, -122.4194], [31.89591734107325, -88.57589912008646], [26.10413372517339, -117.9439924370785], [34.0522, -118.2437], [25.238568712018917, -97.46457146096392], [25.448511060134607, -115.2381858501268], [40.7128, -74.006], [49.91506157032417, -115.63818440102338], [48.49176779882416, -81.09084842566563], [48.77952741037093, -115.80683985239432]],
+                {
+  "minOpacity": 0.5,
+  "maxZoom": 18,
+  "radius": 25,
+  "blur": 15,
+}
+            );
+        
+    
+            heat_map_0c0d75477e1027e157c7bd89cb29d473.addTo(map_2204647b504dfd92f592dadebe0a7a27);
+        
+</script>
+</html>

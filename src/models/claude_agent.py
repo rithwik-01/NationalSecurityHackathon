@@ -12,19 +12,19 @@ class ClaudeAgent:
         """Generate a realistic attack scenario based on target information"""
         prompt = self._create_attack_scenario_prompt(target_info, complexity)
         
-        response = self.client.messages.create(
-            model="claude-3-opus-20240229",
-            max_tokens=2000,
-            temperature=0.7,
-            system="You are an expert red team security analyst tasked with identifying realistic vulnerabilities in systems.",
-            messages=[
-                {"role": "user", "content": prompt}
-            ]
-        )
+            response = self.client.messages.create(
+                model="claude-3-opus-20240229",
+                max_tokens=2000,
+                temperature=0.7,
+                system="You are an expert red team security analyst tasked with identifying realistic vulnerabilities in systems.",
+                messages=[
+                    {"role": "user", "content": prompt}
+                ]
+            )
+            
+            # Parse the response into a structured scenario
+            return self._parse_attack_scenario(response.content[0].text)
         
-        # Parse the response into a structured scenario
-        return self._parse_attack_scenario(response.content[0].text)
-    
     def analyze_vulnerability(self, scenario: Dict[str, Any], system_details: Dict[str, Any]) -> Dict[str, Any]:
         """Analyze a vulnerability and provide detailed explanation and recommendations"""
         prompt = self._create_vulnerability_analysis_prompt(scenario, system_details)
